@@ -16,7 +16,7 @@
 
 
 ### 3. Изменение настроек<a name="3"></a>
-![](https://user-images.githubusercontent.com/50372504/67149531-e619db00-f2b4-11e9-8f86-f212dc44c754.jpg)
+![](https://user-images.githubusercontent.com/50372504/67149670-b4097880-f2b6-11e9-84e9-3c5f1ae27331.jpg)
   
 ### 4. Выход<a name="4"></a>
 ![](https://user-images.githubusercontent.com/50372504/67149531-e619db00-f2b4-11e9-8f86-f212dc44c754.jpg)
