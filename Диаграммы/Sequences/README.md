@@ -10,9 +10,8 @@
 ![](https://user-images.githubusercontent.com/50372504/67149945-29c31380-f2ba-11e9-8bce-9fe1fcf3cb7d.jpg)
 
 ### 2. Улучшить башню<a name="2"></a>
-При нажати левой кнопкой мыши на башню откроется окно выбора,в котором можно выбрать улучшение башни.Для того чтобы улучшить башню нужны ресурсы.
 
-![Activity Diagram1](https://user-images.githubusercontent.com/50372504/67149038-2fffc280-f2af-11e9-920d-b174475cc198.png)
+![](https://user-images.githubusercontent.com/50372504/67150154-87f0f600-f2bc-11e9-8051-8d91a9344430.jpg)
 
 
 ### 3. Изменение настроек<a name="3"></a>
