@@ -11,7 +11,7 @@
 
 ### 2. Улучшить башню<a name="2"></a>
 
-![](https://user-images.githubusercontent.com/50372504/67150154-87f0f600-f2bc-11e9-8051-8d91a9344430.jpg)
+![](https://user-images.githubusercontent.com/50372504/67150181-c8e90a80-f2bc-11e9-97fa-d93debede986.jpg)
 
 
 ### 3. Изменение настроек<a name="3"></a>
