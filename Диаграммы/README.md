@@ -89,8 +89,8 @@
 
 
 ### 2. Диаграмма активности<a name="2"></a>
- ![Диаграммы агтивности](https://github.com/ProRitsaTel/Bomberman/blob/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Activites/README.md)
+ ![Диаграммы агтивности](https://github.com/danila16030/Tower-defence/blob/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Activities/README.md)
 ### 3. Диаграмма последовательности<a name="3"></a>
-![Диаграммы последовательности](https://github.com/ProRitsaTel/Bomberman/blob/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Sequences/README.md)
+![Диаграммы последовательности](https://github.com/danila16030/Tower-defence/blob/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Sequences/README.md)
 
 
