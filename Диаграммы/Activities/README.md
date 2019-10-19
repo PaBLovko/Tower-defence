@@ -7,7 +7,7 @@
 ### 1. Мультиплеер<a name="1"></a>
 При нажатии кнопки "Мультиплеер" откроется окно выбора. Необходимо нажать либо кнопку создания сервера,лиюо присоеденения к серверу.
 
-![Activity Diagram1](https://user-images.githubusercontent.com/49131712/66784710-e3e60400-eee3-11e9-8f82-e6e4a30c86b1.jpg)
+![Activity Diagram1](https://user-images.githubusercontent.com/50372504/67148812-6ee04900-f2ac-11e9-9d14-43ee2d38bd1a.png)
 
 
 ### 3. Изменение настроек<a name="3"></a>
