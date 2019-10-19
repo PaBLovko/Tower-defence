@@ -19,6 +19,4 @@
 ![](https://user-images.githubusercontent.com/50372504/67149531-e619db00-f2b4-11e9-8f86-f212dc44c754.jpg)
   
 ### 4. Выход<a name="4"></a>
-При нажатии кнопки "Выход" произойдёт выход из игры.
-
-![Activity Diagram3](https://user-images.githubusercontent.com/49131712/66786228-5822a680-eee8-11e9-85c5-26bbe6094e03.jpg)
+![](https://user-images.githubusercontent.com/50372504/67149531-e619db00-f2b4-11e9-8f86-f212dc44c754.jpg)
