@@ -14,7 +14,7 @@
 
 ### 1. Диаграмма прецедентов<a name="1"></a>
 Диаграмма прецедентов представляет собой следующую диаграмму: 
-![Use Case Diagram1](https://user-images.githubusercontent.com/49131712/66780895-9d3fdc00-eeda-11e9-8e02-5d7b64ac9fd3.jpg)
+![Use Case Diagram1](https://user-images.githubusercontent.com/50372504/67147113-78f94c00-f29a-11e9-8b6a-a78affe57d1a.png)
 
 #### 1.1 Актёры<a name="1.1"></a>
 Актёр | Описание
