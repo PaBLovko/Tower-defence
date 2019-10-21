@@ -18,4 +18,4 @@
 ![](https://user-images.githubusercontent.com/50372504/67149670-b4097880-f2b6-11e9-84e9-3c5f1ae27331.jpg)
   
 ### 4. Выход<a name="4"></a>
-![](https://user-images.githubusercontent.com/50372504/67149706-33974780-f2b7-11e9-9c2b-0e9c70fb558b.jpg)
+![](https://user-images.githubusercontent.com/50372504/67150198-02ba1100-f2bd-11e9-9ad9-4e1e05eced40.jpg)
