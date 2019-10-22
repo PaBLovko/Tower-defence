@@ -63,9 +63,7 @@
 #### 1.2.1.4 Логическое завершение уровня<a name="1.2.1.4"></a>
 **Описание.** Позволяет увидеть как завершился уровня.
 1. Игрок пропустил слишком много врагов/игрок убил всех противников.
-2. Отображается соответствующая надпись "You Lose/You win".
-
-![](https://github.com/danila16030/Tower-defence/blob/master/%D0%9C%D0%BE%D0%BA%D0%B0%D0%BF%D1%8B/%D0%9F%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%20%D0%BF%D1%80%D0%B8%20%D0%BF%D0%BE%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B8.png)
+2. Отображается [окно завершение уровня](https://github.com/danila16030/Tower-defence/blob/master/%D0%9C%D0%BE%D0%BA%D0%B0%D0%BF%D1%8B/%D0%9F%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%20%D0%BF%D1%80%D0%B8%20%D0%BF%D0%BE%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B8.png)
 
 3.Выход в [окно выбора уровня](https://github.com/danila16030/Tower-defence/blob/master/%D0%9C%D0%BE%D0%BA%D0%B0%D0%BF%D1%8B/%D0%9F%D0%B0%D0%BD%D0%B5%D0%BB%D1%8C%20%D0%B2%D1%8B%D0%B1%D0%BE%D1%80%D0%B0%20%D1%83%D1%80%D0%BE%D0%B2%D0%BD%D1%8F.png)
 
