@@ -2,31 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager : MonoBehaviour {
+public class Manager : Loader<Manager> 
+{
+    [SerializeField]//чтобы поля было видно в юнити
+    GameObject spawnPoint;
+    [SerializeField]
+    GameObject[] enemies;
+    [SerializeField]
+    int maxEnemyOnScrean;
+    [SerializeField]
+    int totalEnemys;
+    [SerializeField]
+    int enemyType;
+    [SerializeField]
+    int wasEnemyOnScrean;
+    [SerializeField]
+    int enemiesPerSpawn;
+    
 
-    public static Manager instance = null;
-    public GameObject spawnPoint;
-    public GameObject[] enemies;
-    public int maxEnemyOnScrean;
-    public int totalEnemys;
-    public int enemyType;
-    public int enemiesPerSpawn;
-
-    int enemyOnScrean = 0;
+    public List<Enemy> EnemyList = new List<Enemy>();
 
     // Use this for initialization
     const float SpawnDelay = 0.5f;
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else if(instance!=this){
-            Destroy(gameObject);
-        }
-        DontDestroyOnLoad(gameObject);
-    }
+      
 
     void Start () {
         StartCoroutine(Spawn());
@@ -38,12 +36,12 @@ public class Manager : MonoBehaviour {
 
     IEnumerator Spawn()
     {
-        if (enemiesPerSpawn > 0 && enemyOnScrean < totalEnemys) {//если спавнить нужно больше 0 и количество сущ на экране  меньше максисмума
+        if (enemiesPerSpawn > 0 && EnemyList.Count < totalEnemys&& wasEnemyOnScrean!=totalEnemys) {//если спавнить нужно больше 0 и количество сущ на экране  меньше максисмума
             for (int i=0;i<enemiesPerSpawn;i++) {//делаем цикл
-                if (enemyOnScrean < maxEnemyOnScrean) {//спавним одно существо 
+                if (EnemyList.Count < maxEnemyOnScrean) {//спавним одно существо 
                     GameObject newEnemy = Instantiate(enemies[enemyType]) as GameObject;//какой тип 
                     newEnemy.transform.position = spawnPoint.transform.position;//по каким координатом
-                    enemyOnScrean++;//увиличиваем количество на 1
+                    wasEnemyOnScrean++;
                 }
             }
         } 
@@ -51,11 +49,20 @@ public class Manager : MonoBehaviour {
         StartCoroutine(Spawn());//вызываем спавн
     }
 
-    public void removeEnemyFromScrean()
-    {
-        if (enemyOnScrean > 0) {
-            enemyOnScrean--;
-        }
+    public void registerEnemy( Enemy enemy) {//регистр противника
+        EnemyList.Add(enemy);
     }
 
+    public void unRegisterEnemy(Enemy enemy)
+    {//убираем противника
+        EnemyList.Remove(enemy);
+        Destroy(enemy.gameObject);//убираем объект нашего противника
+    }
+
+    public void destrayEnemies() {
+        foreach (Enemy enemy in EnemyList) {
+            Destroy(enemy.gameObject);//уничтожение противника
+        }
+        EnemyList.Clear();//если уничтожили всех противников очистить экран
+    }
 }

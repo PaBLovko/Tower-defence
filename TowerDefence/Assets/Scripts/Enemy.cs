@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
 
 	void Start () {
         enemy = GetComponent<Transform>();//чтобы реализовать и считывать положение персонажа
+        Manager.Instance.registerEnemy(this);
 	}
 	
 	// Update is called once per frame
@@ -40,8 +41,7 @@ public class Enemy : MonoBehaviour {
             target++;//если дошли до цели идем к след
         }
         else if (collision.tag == "Finish") {
-            Manager.instance.removeEnemyFromScrean();
-            Destroy(gameObject);//усли дошли до финиша delite 
+            Manager.Instance.unRegisterEnemy(this);
         }
     }
 }

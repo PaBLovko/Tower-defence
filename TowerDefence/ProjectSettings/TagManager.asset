@@ -6,6 +6,11 @@ TagManager:
   tags:
   - MoveingPoint
   - Enemy
+  - Ground
+  - Tower
+  - TowerGround
+  - TowerGroundIsFull
+  - ProjectTile
   layers:
   - Default
   - TransparentFX
