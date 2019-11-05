@@ -97,7 +97,7 @@
 [Диаграмма последовательности](https://github.com/danila16030/Tower-defence/blob/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Sequences/README.md)
 
 ### 4. Диаграмма состояний<a name="4"></a>
-![Диаграммы состояний](https://user-images.githubusercontent.com/50372504/68202588-0fd14280-ffd5-11e9-8e63-57cd19885e61.png)
+![Диаграммы состояний](https://user-images.githubusercontent.com/50372504/68205096-74db6700-ffda-11e9-8157-b342bfdcf3d7.png)
 ### 5. Диаграмма классов<a name="5"></a>
 ![](https://user-images.githubusercontent.com/50372504/68149596-3187e680-ff4f-11e9-8403-78a13d2cf0b3.png)
 ### 6. Диаграмма развертывания<a name="6"></a>
