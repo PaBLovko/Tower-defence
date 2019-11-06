@@ -45,7 +45,7 @@ public class TowerManager : Loader<TowerManager> {
     {
         if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)//мы не сможем поставить башню если нажали на кноку выбора башни
         {
-            GameObject newTower = Instantiate(towerBtnPressed.TowerObject);//создаем там башню именно того типа на который мы кликнули 
+            GameObject newTower = Instantiate(towerBtnPressed.GetTowerObject);//создаем там башню именно того типа на который мы кликнули 
             newTower.transform.position = hit.transform.position;//положение нового тавера будет в том месте куда мы кликаем
         }
     }
@@ -67,7 +67,7 @@ public class TowerManager : Loader<TowerManager> {
 
     public void SelectedTower(TowerBtn towerSellected) {//какая башня была выбрана 
         towerBtnPressed = towerSellected;//относит только кнопки мы нажали должна быть выбрана башня
-        EnebleDrag(towerBtnPressed.DragSprite);//включаем отолражение картинки тавера 
+        EnebleDrag(towerBtnPressed.GetDragSprite);//включаем отолражение картинки тавера 
 
     }
 

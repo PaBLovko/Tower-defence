@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4651488179532500}
   - component: {fileID: 212795307185434196}
+  - component: {fileID: 114732249766941668}
   m_Layer: 0
   m_Name: Tower1
   m_TagString: Tower
@@ -34,12 +35,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523342072608178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.117367, y: 0.3444385, z: 0}
+  m_LocalPosition: {x: -7.4508357, y: -0.9169635, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114732249766941668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523342072608178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d6990ecd3c8e640bbaa1ecdedbdb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetwenAttack: 1
+  attackRadius: 2
+  projectTile: {fileID: 114768404879433542, guid: 195820226d4bc1943b351eae5675187f,
+    type: 2}
 --- !u!212 &212795307185434196
 SpriteRenderer:
   m_ObjectHideFlags: 1

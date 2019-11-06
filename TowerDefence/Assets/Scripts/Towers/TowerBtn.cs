@@ -8,18 +8,16 @@ public class TowerBtn : MonoBehaviour {
     Sprite dragSprite;
 
 
-    public GameObject TowerObject{
+    public GameObject GetTowerObject{
         get {
-
             return towerObject;//возвращает башню
         }
     }
 
-    public Sprite DragSprite
+    public Sprite GetDragSprite
     {
         get
         {
-
             return dragSprite;//возвращает картинку
         }
     }

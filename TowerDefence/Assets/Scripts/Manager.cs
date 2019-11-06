@@ -49,17 +49,17 @@ public class Manager : Loader<Manager>
         StartCoroutine(Spawn());//вызываем спавн
     }
 
-    public void registerEnemy( Enemy enemy) {//регистр противника
+    public void RegisterEnemy( Enemy enemy) {//регистр противника
         EnemyList.Add(enemy);
     }
 
-    public void unRegisterEnemy(Enemy enemy)
+    public void UnRegisterEnemy(Enemy enemy)
     {//убираем противника
         EnemyList.Remove(enemy);
         Destroy(enemy.gameObject);//убираем объект нашего противника
     }
 
-    public void destrayEnemies() {
+    public void DestrayEnemies() {
         foreach (Enemy enemy in EnemyList) {
             Destroy(enemy.gameObject);//уничтожение противника
         }

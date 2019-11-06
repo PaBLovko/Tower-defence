@@ -13,7 +13,7 @@ public class ProjectTile : MonoBehaviour
     [SerializeField]
     projectTipe pType;
 
-    public int getAttackDamage
+    public int GetAttackDamage
     {
         get
         {
@@ -21,7 +21,7 @@ public class ProjectTile : MonoBehaviour
         }
     }
 
-    public projectTipe getProjectTipe
+    public projectTipe GetProjectTipe
     {
         get
         {
