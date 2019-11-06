@@ -54,6 +54,8 @@ public class TowerControlle : MonoBehaviour {
         isAttacking = false;
         ProjectTile newProjectTile = Instantiate(projectTile) as ProjectTile ;
         newProjectTile.transform.localPosition = transform.localPosition;//стрела появляется в башни
+
+
         if (targetEnemy == null)
         {
             Destroy(newProjectTile);
@@ -75,10 +77,10 @@ public class TowerControlle : MonoBehaviour {
             projectTile.transform.localPosition = Vector2.MoveTowards(projectTile.transform.localPosition, targetEnemy.transform.localPosition,5f*Time.deltaTime);//летим
             yield return null;
         }
-
-        if (projectTile != null || targetEnemy == null)
+       
+        if (projectTile != null || targetEnemy == null|| GetTargetDistance(targetEnemy)>attackRadius)
         {
-            Destroy(projectTile);
+            Destroy(projectTile.gameObject);
         }
     }
 

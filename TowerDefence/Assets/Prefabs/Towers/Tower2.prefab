@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetwenAttack: 1.5
-  attackRadius: 3
+  attackRadius: 6
   projectTile: {fileID: 114469065111782390, guid: 7d44be41b608e0d45add7424c890c307,
     type: 2}
 --- !u!212 &212488507383442430
