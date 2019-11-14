@@ -54,7 +54,7 @@ public class TowerControlle : MonoBehaviour {
         isAttacking = false;
         ProjectTile newProjectTile = Instantiate(projectTile) as ProjectTile ;
         newProjectTile.transform.localPosition = transform.localPosition;//стрела появляется в башни
-
+        GetComponent<AudioSource>().Play();
 
         if (targetEnemy == null)
         {

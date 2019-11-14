@@ -27,6 +27,7 @@ public class TowerManager : Loader<TowerManager> {
 
                 PlaceTower(hit);//то выставляем товер 
                 DisebleDrag();
+                GetComponent<AudioSource>().Play();
             }
         }
 
@@ -58,6 +59,7 @@ public class TowerManager : Loader<TowerManager> {
     public void EnebleDrag(Sprite sprite) {
         spriteRenderer.enabled = true;//включаем отображение картинки
         spriteRenderer.sprite = sprite;//отображаем ту картинку кот выбрана
+     
     }
 
     public void DisebleDrag()
