@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : Loader<Manager> 
 {
@@ -18,13 +19,31 @@ public class Manager : Loader<Manager>
     int wasEnemyOnScrean;
     [SerializeField]
     int enemiesPerSpawn;
-    
+
+    bool isPaused = false;
 
     public List<Enemy> EnemyList = new List<Enemy>();
 
     // Use this for initialization
     const float SpawnDelay = 0.5f;
-      
+
+    private void Update()
+    {
+        bool esc = Input.GetKey(KeyCode.Escape);
+        if (esc && !isPaused)
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            if (esc && isPaused)
+            {
+                isPaused = false;
+                Time.timeScale = 1;
+            }
+        }
+    }
 
     void Start () {
         StartCoroutine(Spawn());
