@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class UiManager : MonoBehaviour {
 
     [SerializeField]
-    AudioSource NewGameMusic;
-
+    AudioSource newGameMusic;
+    [SerializeField]
+    AudioSource levelMusic;
 
     [SerializeField]
-    AudioSource LevelMusic;
+    GameObject pausePanel;
+
 
     public AudioMixerGroup Mixer;
 
@@ -26,8 +28,8 @@ public class UiManager : MonoBehaviour {
 	}
 
     public void NewGame() {
-        LevelMusic.Stop();
-        NewGameMusic.Play();
+        levelMusic.Stop();
+        newGameMusic.Play();
         SceneManager.LoadScene(1);
     }
 
@@ -39,7 +41,12 @@ public class UiManager : MonoBehaviour {
         Application.Quit();
     }
 
-    public void GoBack()
+    public void GoBack() {
+        Time.timeScale = 1;
+        pausePanel.SetActive(false);
+    }
+
+    public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
     }
@@ -53,5 +60,9 @@ public class UiManager : MonoBehaviour {
     {
         Mixer.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-40, -20, volume));
     }
-
+    public void GamePause()
+    {
+           Time.timeScale = 0;
+           pausePanel.SetActive(true);      
+    }
 }
