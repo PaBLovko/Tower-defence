@@ -63,6 +63,7 @@ MonoBehaviour:
   enemiesPerSpawn: 1
   pausePanel: {fileID: 0}
   lvlnumber: 4
+  error: {fileID: 0}
   resources: 100
   health: 4
   numberOfLifes: 4

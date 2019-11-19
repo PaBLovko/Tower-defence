@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Manager : Loader<Manager> 
+public class Manager : Loader<Manager>
 {
     [SerializeField]//чтобы поля было видно в юнити
     GameObject spawnPoint;
@@ -25,15 +25,19 @@ public class Manager : Loader<Manager>
     bool isPaused = false;
 
     [SerializeField]
-    public int lvlnumber;
+    int lvlnumber;
 
     [SerializeField]
-    public int resources;
+    AudioSource error;
+
+
+    [SerializeField]
+    int resources;
 
     public int health;
 
     [SerializeField]
-    public int numberOfLifes;
+    int numberOfLifes;
     public Image[] lives;
     public Sprite fulLife;
     public Sprite emptyLife;
@@ -45,10 +49,12 @@ public class Manager : Loader<Manager>
 
     private void Update()
     {
-        if (health <= 0) {
+        if (health <= 0)
+        {
             SceneManager.LoadScene(lvlnumber);
         }
-        for (int i = 0; i < lives.Length; i++) {
+        for (int i = 0; i < lives.Length; i++)
+        {
 
             if (i < health)
             {
@@ -63,62 +69,72 @@ public class Manager : Loader<Manager>
             {
                 lives[i].enabled = true;
             }
-            else {
+            else
+            {
                 lives[i].enabled = false;
             }
         }
     }
 
-    void Start () {
+    void Start()
+    {
         StartCoroutine(Spawn());
-	}
-
-
-    // Update is called once per frame
-   
+    }
 
     IEnumerator Spawn()
     {
-        if (enemiesPerSpawn > 0 && EnemyList.Count < totalEnemys&& wasEnemyOnScrean!=totalEnemys) {//если спавнить нужно больше 0 и количество сущ на экране  меньше максисмума
-            for (int i=0;i<enemiesPerSpawn;i++) {//делаем цикл
-                if (EnemyList.Count < maxEnemyOnScrean) {//спавним одно существо 
+        if (enemiesPerSpawn > 0 && EnemyList.Count < totalEnemys && wasEnemyOnScrean != totalEnemys)
+        {//если спавнить нужно больше 0 и количество сущ на экране  меньше максисмума
+            for (int i = 0; i < enemiesPerSpawn; i++)
+            {//делаем цикл
+                if (EnemyList.Count < maxEnemyOnScrean)
+                {//спавним одно существо 
                     GameObject newEnemy = Instantiate(enemies[enemyType]) as GameObject;//какой тип 
                     newEnemy.transform.position = spawnPoint.transform.position;//по каким координатом
                     wasEnemyOnScrean++;
                 }
             }
-        } 
+        }
         yield return new WaitForSeconds(SpawnDelay);//делаем задержку
         StartCoroutine(Spawn());//вызываем спавн
     }
 
-    public void RegisterEnemy( Enemy enemy) {//регистр противника
+    public void RegisterEnemy(Enemy enemy)
+    {//регистр противника
         EnemyList.Add(enemy);
     }
 
-    public void UnRegisterEnemy(Enemy enemy,bool finis)
+    public void UnRegisterEnemy(Enemy enemy, bool finis)
     {//убираем противника
         EnemyList.Remove(enemy);
         if (finis == false)
         {
             health--;
         }
+        Manager.Instance.SetResources(enemy.GetReward());
         Destroy(enemy.gameObject);//убираем объект нашего противника
     }
 
-    public void DestrayEnemies() {
-        foreach (Enemy enemy in EnemyList) {
+    public void DestrayEnemies()
+    {
+        foreach (Enemy enemy in EnemyList)
+        {
             Destroy(enemy.gameObject);//уничтожение противника
         }
         EnemyList.Clear();//если уничтожили всех противников очистить экран
     }
 
-    public int GetResources() {
+    public int GetResources()
+    {
         return resources;
     }
     public void SetResources(int newResurces)
     {
-        resources=newResurces;
+        resources = newResurces;
+    }
+    public AudioSource GetSound()
+    {
+        return error;
     }
 
 }

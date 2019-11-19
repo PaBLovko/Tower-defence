@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-public class UiManager : MonoBehaviour {
+public class UiManager : MonoBehaviour
+{
 
     [SerializeField]
     AudioSource newGameMusic;
@@ -17,9 +18,10 @@ public class UiManager : MonoBehaviour {
 
     public AudioMixerGroup Mixer;
 
-    
 
-    public void NewGame() {
+
+    public void NewGame()
+    {
         SceneManager.LoadScene(1);
     }
 
@@ -28,15 +30,18 @@ public class UiManager : MonoBehaviour {
         SceneManager.LoadScene(3);
     }
 
-    public void Settings() {
+    public void Settings()
+    {
         SceneManager.LoadScene(2);
     }
 
-    public void Exit() {
+    public void Exit()
+    {
         Application.Quit();
     }
 
-    public void GoBack() {
+    public void GoBack()
+    {
         Time.timeScale = 1;
         pausePanel.SetActive(false);
     }
@@ -57,7 +62,7 @@ public class UiManager : MonoBehaviour {
     }
     public void GamePause()
     {
-           Time.timeScale = 0;
-           pausePanel.SetActive(true);      
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
     }
 }

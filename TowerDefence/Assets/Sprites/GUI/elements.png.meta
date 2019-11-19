@@ -12,6 +12,7 @@ TextureImporter:
     21300014: FullHealth
     21300016: LowHealth
     21300018: Money
+    21300020: towerCost
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -280,13 +281,33 @@ TextureImporter:
         width: 182
         height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 1dc8b2722a9eb5b43983abc957a55b91
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: towerCost
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 1206
+        width: 131
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac47df7bb1c7c1d4cb29af51bbad1797
       vertices: []
       indices: 
       edges: []

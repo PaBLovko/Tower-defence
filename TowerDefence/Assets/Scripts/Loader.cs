@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Loader<T> : MonoBehaviour where T:MonoBehaviour {
+public class Loader<T> : MonoBehaviour where T : MonoBehaviour
+{
 
     private static T instance;
 

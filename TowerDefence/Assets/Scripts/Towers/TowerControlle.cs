@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerControlle : MonoBehaviour {
+public class TowerControlle : MonoBehaviour
+{
     [SerializeField]
     float timeBetwenAttack;
     [SerializeField]
@@ -17,9 +18,10 @@ public class TowerControlle : MonoBehaviour {
     float attackCounter;
     bool isAttacking = false;
 
-    void Update() {
+    void Update()
+    {
         attackCounter -= Time.deltaTime;//задержка перед выстрелом
-       
+
         if (targetEnemy == null)
         {
             Enemy nearestEnemy = GetNearestEnemy();
@@ -30,8 +32,7 @@ public class TowerControlle : MonoBehaviour {
         }
         else
         {
-           
-                if (attackCounter <= 0)
+            if (attackCounter <= 0)
             {
                 isAttacking = true;
                 attackCounter = timeBetwenAttack;
@@ -47,7 +48,7 @@ public class TowerControlle : MonoBehaviour {
         }
     }
 
- 
+
     public void FixedUpdate()
     {
         if (isAttacking == true)
@@ -59,7 +60,7 @@ public class TowerControlle : MonoBehaviour {
     public void Attack()
     {
         isAttacking = false;
-        ProjectTile newProjectTile = Instantiate(projectTile) as ProjectTile ;
+        ProjectTile newProjectTile = Instantiate(projectTile) as ProjectTile;
         newProjectTile.transform.localPosition = transform.localPosition;//стрела появляется в башни
         GetComponent<AudioSource>().Play();
 
@@ -81,16 +82,17 @@ public class TowerControlle : MonoBehaviour {
             var dir = targetEnemy.transform.localPosition - transform.localPosition;//приблежаемся
             var angelDirection = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;//как поворачивать снаряд чтобы выглядело что он летит 
             projectTile.transform.rotation = Quaternion.AngleAxis(angelDirection, Vector3.forward);//поворачиает
-            projectTile.transform.localPosition = Vector2.MoveTowards(projectTile.transform.localPosition, targetEnemy.transform.localPosition,5f*Time.deltaTime);//летим
-            if (projectTile.transform.localPosition == targetEnemy.transform.localPosition) {
+            projectTile.transform.localPosition = Vector2.MoveTowards(projectTile.transform.localPosition, targetEnemy.transform.localPosition, 5f * Time.deltaTime);//летим
+            if (projectTile.transform.localPosition == targetEnemy.transform.localPosition)
+            {
                 Destroy(projectTile.gameObject);
                 targetEnemy.GetDamage(projectTile.GetAttackDamage);
             }
             yield return null;
         }
 
-     
-        if (projectTile != null || targetEnemy == null|| GetTargetDistance(targetEnemy)>attackRadius)
+
+        if (projectTile != null || targetEnemy == null || GetTargetDistance(targetEnemy) > attackRadius)
         {
             Destroy(projectTile.gameObject);
         }
@@ -110,25 +112,31 @@ public class TowerControlle : MonoBehaviour {
         return Mathf.Abs(Vector2.Distance(transform.localPosition, enemy.transform.localPosition));//расстояние до протикника
     }
 
-    public int GetCost() {
+    public int GetCost()
+    {
         return this.cost;
     }
 
-    private List<Enemy> GetEnemiesInRange() {
+    private List<Enemy> GetEnemiesInRange()
+    {
         List<Enemy> enemiesInRange = new List<Enemy>();
-        foreach (Enemy enemy in Manager.Instance.EnemyList) {
-            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <=attackRadius) {
+        foreach (Enemy enemy in Manager.Instance.EnemyList)
+        {
+            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <= attackRadius)
+            {
                 enemiesInRange.Add(enemy);
             }
         }
         return enemiesInRange;
     }
-    private Enemy GetNearestEnemy() {
+    private Enemy GetNearestEnemy()
+    {
         Enemy nearestEnemy = null;
         float smollestDistense = float.PositiveInfinity;
 
-        foreach (Enemy enemy in GetEnemiesInRange()) {
-            
+        foreach (Enemy enemy in GetEnemiesInRange())
+        {
+
             if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <= smollestDistense)
             {
                 smollestDistense = Vector2.Distance(transform.localPosition, enemy.transform.localPosition);//расстояние от башни до противника=наим раст
@@ -137,6 +145,6 @@ public class TowerControlle : MonoBehaviour {
         }
         return nearestEnemy;
     }
-    
+
 
 }

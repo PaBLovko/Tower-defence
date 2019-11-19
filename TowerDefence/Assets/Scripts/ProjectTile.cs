@@ -2,7 +2,7 @@
 
 public enum projectTipe
 {
-    rock, arrow,fireball
+    rock, arrow, fireball
 };
 
 public class ProjectTile : MonoBehaviour

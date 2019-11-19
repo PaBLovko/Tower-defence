@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 
-public class TowerBtn : MonoBehaviour {
+public class TowerBtn : MonoBehaviour
+{
 
     [SerializeField]
     GameObject towerObject;
     [SerializeField]
     Sprite dragSprite;
 
-
-    public GameObject GetTowerObject{
-        get {
+    public GameObject GetTowerObject
+    {
+        get
+        {
             return towerObject;//возвращает башню
         }
     }

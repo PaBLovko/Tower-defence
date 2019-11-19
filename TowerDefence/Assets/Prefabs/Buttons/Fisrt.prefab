@@ -44,6 +44,8 @@ MonoBehaviour:
   towerObject: {fileID: 1523342072608178, guid: f949633f7ccfeae4f8b75009d511a77b,
     type: 2}
   dragSprite: {fileID: 21300000, guid: 3a8e0ad2811fd7d478c73b38930f4d4d, type: 3}
+  errorSound: {fileID: 82635818365244034, guid: 62cb9958ddbb9ef4d9197c021275f683,
+    type: 2}
 --- !u!114 &114047333251524040
 MonoBehaviour:
   m_ObjectHideFlags: 1

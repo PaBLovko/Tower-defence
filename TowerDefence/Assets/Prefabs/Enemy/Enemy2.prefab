@@ -137,6 +137,7 @@ MonoBehaviour:
   navigation: 0
   bar: {fileID: 114125462402961672, guid: b20bebd8c1898df4aa6189488accba16, type: 2}
   health: 1.2
+  reward: 30
 --- !u!212 &212043085511857772
 SpriteRenderer:
   m_ObjectHideFlags: 1
