@@ -11,6 +11,7 @@ TextureImporter:
     21300012: healthBar
     21300014: FullHealth
     21300016: LowHealth
+    21300018: Money
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -259,13 +260,33 @@ TextureImporter:
         width: 68
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: f83e4805500da8d4aa8bdae496382ad3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Money
+      rect:
+        serializedVersion: 2
+        x: 2613
+        y: 2127
+        width: 182
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc8b2722a9eb5b43983abc957a55b91
       vertices: []
       indices: 
       edges: []

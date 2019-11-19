@@ -14,11 +14,12 @@ public class TowerManager : Loader<TowerManager> {
 
     // Update is called once per frame
     void Update() {
+        TowerControlle chousenTower = towerBtnPressed.GetTowerControll;
         if (Input.GetMouseButton(0))
         {//если нажимаем левую кнопку мыши
             Vector2 mousePoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);//считывает положение нашего курсора относительно экрана
             RaycastHit2D hit = Physics2D.Raycast(mousePoint, Vector2.zero);//луч будет идти от нуля координат и отправлятся к месту нашего клика и будет смотреть куда мы кликаем
-            if (hit.collider.tag == "TowerGround"&&towerBtnPressed!=null)
+            if (chousenTower.GetCost() <= Manager.Instance.GetResources()&&hit.collider.tag == "TowerGround"&&towerBtnPressed!=null)
             {//если мы получим какой-то тег и он равен TowerGround
 
                 hit.collider.tag = "TowerGroundIsFull";//меняем тэг чтобы нельзя было поставить 2 башни в одну 
@@ -41,9 +42,9 @@ public class TowerManager : Loader<TowerManager> {
 
     public void PlaceTower(RaycastHit2D hit)
     {
-        TowerControlle chousenTower = towerBtnPressed.GetTowerControll;
-        if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null&&chousenTower.GetCost()<=Manager.Instance.GetResources())//мы не сможем поставить башню если нажали на кноку выбора башни
+        if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)//мы не сможем поставить башню если нажали на кноку выбора башни
         {
+            TowerControlle chousenTower = towerBtnPressed.GetTowerControll;
             Manager.Instance.SetResources(Manager.Instance.GetResources()- chousenTower.GetCost());
             GameObject newTower = Instantiate(towerBtnPressed.GetTowerObject);//создаем там башню именно того типа на который мы кликнули 
             
