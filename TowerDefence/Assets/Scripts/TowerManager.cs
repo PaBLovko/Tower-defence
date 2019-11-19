@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class TowerManager : Loader<TowerManager> {
@@ -35,8 +33,7 @@ public class TowerManager : Loader<TowerManager> {
             DisebleDrag();
             towerBtnPressed = null;
         }
-
-            if (spriteRenderer.enabled)
+         if (spriteRenderer.enabled)
         {//если у нас активен спрайт рендерер то следуем мыши
             FollowMouse();
         }
@@ -44,9 +41,12 @@ public class TowerManager : Loader<TowerManager> {
 
     public void PlaceTower(RaycastHit2D hit)
     {
-        if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)//мы не сможем поставить башню если нажали на кноку выбора башни
+        TowerControlle chousenTower = towerBtnPressed.GetTowerControll;
+        if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null&&chousenTower.GetCost()<=Manager.Instance.GetResources())//мы не сможем поставить башню если нажали на кноку выбора башни
         {
+            Manager.Instance.SetResources(Manager.Instance.GetResources()- chousenTower.GetCost());
             GameObject newTower = Instantiate(towerBtnPressed.GetTowerObject);//создаем там башню именно того типа на который мы кликнули 
+            
             newTower.transform.position = hit.transform.position;//положение нового тавера будет в том месте куда мы кликаем
         }
     }

@@ -62,9 +62,15 @@ MonoBehaviour:
   wasEnemyOnScrean: 0
   enemiesPerSpawn: 1
   pausePanel: {fileID: 0}
-  health: 5
-  numberOfLifes: 5
-  lives: []
-  fulLife: {fileID: 0}
-  emptyLife: {fileID: 0}
+  lvlnumber: 4
+  resources: 100
+  health: 4
+  numberOfLifes: 4
+  lives:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fulLife: {fileID: 21300014, guid: 5babe30ec0f98da469837548f25535b2, type: 3}
+  emptyLife: {fileID: 21300016, guid: 5babe30ec0f98da469837548f25535b2, type: 3}
   EnemyList: []

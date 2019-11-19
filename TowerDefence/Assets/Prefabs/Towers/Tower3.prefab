@@ -150,9 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetwenAttack: 2
-  attackRadius: 9
+  attackRadius: 5
   projectTile: {fileID: 114563156577335044, guid: cf2c320cdc89b9f41bb20a93ac6edfbb,
     type: 2}
+  cost: 75
 --- !u!212 &212931244415727702
 SpriteRenderer:
   m_ObjectHideFlags: 1

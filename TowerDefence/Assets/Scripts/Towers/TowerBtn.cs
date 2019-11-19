@@ -14,6 +14,14 @@ public class TowerBtn : MonoBehaviour {
         }
     }
 
+    public TowerControlle GetTowerControll
+    {
+        get
+        {
+            return towerObject.GetComponent<TowerControlle>();//возвращает башню
+        }
+    }
+
     public Sprite GetDragSprite
     {
         get

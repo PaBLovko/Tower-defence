@@ -10,6 +10,9 @@ public class TowerControlle : MonoBehaviour {
     float attackRadius;
     [SerializeField]
     ProjectTile projectTile;
+
+    public int cost;
+
     Enemy targetEnemy = null;
     float attackCounter;
     bool isAttacking = false;
@@ -105,6 +108,10 @@ public class TowerControlle : MonoBehaviour {
             }
         }
         return Mathf.Abs(Vector2.Distance(transform.localPosition, enemy.transform.localPosition));//расстояние до протикника
+    }
+
+    public int GetCost() {
+        return this.cost;
     }
 
     private List<Enemy> GetEnemiesInRange() {

@@ -5,6 +5,7 @@ TextureImporter:
     21300000: pauseWindow
     21300002: settingsWindow
     21300004: LoseWindow
+    21300006: settingWindow2
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -133,13 +134,33 @@ TextureImporter:
         width: 868
         height: 761
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: bca996dd725a7364a8e8b57b77c1a8f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: settingWindow2
+      rect:
+        serializedVersion: 2
+        x: 3928
+        y: 6147
+        width: 850
+        height: 764
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49baae1770dfdf344af21a6070dd094b
       vertices: []
       indices: 
       edges: []

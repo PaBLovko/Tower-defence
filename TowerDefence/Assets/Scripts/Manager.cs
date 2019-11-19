@@ -24,7 +24,14 @@ public class Manager : Loader<Manager>
     GameObject pausePanel;
     bool isPaused = false;
 
+    [SerializeField]
+    public int lvlnumber;
+
+    [SerializeField]
+    public int resources;
+
     public int health;
+
     [SerializeField]
     public int numberOfLifes;
     public Image[] lives;
@@ -39,7 +46,7 @@ public class Manager : Loader<Manager>
     private void Update()
     {
         if (health <= 0) {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(lvlnumber);
         }
         for (int i = 0; i < lives.Length; i++) {
 
@@ -105,4 +112,13 @@ public class Manager : Loader<Manager>
         }
         EnemyList.Clear();//если уничтожили всех противников очистить экран
     }
+
+    public int GetResources() {
+        return resources;
+    }
+    public void SetResources(int newResurces)
+    {
+        resources=newResurces;
+    }
+
 }
