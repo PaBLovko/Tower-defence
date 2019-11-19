@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Manager : Loader<Manager> 
 {
@@ -23,12 +24,44 @@ public class Manager : Loader<Manager>
     GameObject pausePanel;
     bool isPaused = false;
 
+    public int health;
+    [SerializeField]
+    public int numberOfLifes;
+    public Image[] lives;
+    public Sprite fulLife;
+    public Sprite emptyLife;
+
     public List<Enemy> EnemyList = new List<Enemy>();
 
     // Use this for initialization
     const float SpawnDelay = 0.5f;
 
-   
+    private void Update()
+    {
+        if (health <= 0) {
+            SceneManager.LoadScene(4);
+        }
+        for (int i = 0; i < lives.Length; i++) {
+
+            if (i < health)
+            {
+                lives[i].sprite = fulLife;
+            }
+            else
+            {
+                lives[i].sprite = emptyLife;
+            }
+
+            if (i < numberOfLifes)
+            {
+                lives[i].enabled = true;
+            }
+            else {
+                lives[i].enabled = false;
+            }
+        }
+    }
+
     void Start () {
         StartCoroutine(Spawn());
 	}
@@ -56,9 +89,13 @@ public class Manager : Loader<Manager>
         EnemyList.Add(enemy);
     }
 
-    public void UnRegisterEnemy(Enemy enemy)
+    public void UnRegisterEnemy(Enemy enemy,bool finis)
     {//убираем противника
         EnemyList.Remove(enemy);
+        if (finis == false)
+        {
+            health--;
+        }
         Destroy(enemy.gameObject);//убираем объект нашего противника
     }
 

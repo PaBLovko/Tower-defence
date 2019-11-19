@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4374512564626236}
   - component: {fileID: 212642931261643980}
-  - component: {fileID: 58624005918271590}
   - component: {fileID: 114469065111782390}
+  - component: {fileID: 58931403628100554}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: ProjectTile
@@ -36,13 +36,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351100552297724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.359643, y: 6.4814672, z: 0}
+  m_LocalPosition: {x: -7.1029115, y: -2.013624, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58624005918271590
+--- !u!58 &58931403628100554
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,7 +54,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09, y: 0}
+  m_Offset: {x: -0.06, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
 --- !u!114 &114469065111782390
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c05b052261f794c94974ad61fbebb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atackDamage: 10
+  atackDamage: 0.15
   pType: 2
 --- !u!212 &212642931261643980
 SpriteRenderer:

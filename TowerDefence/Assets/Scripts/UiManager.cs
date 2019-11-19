@@ -17,20 +17,15 @@ public class UiManager : MonoBehaviour {
 
     public AudioMixerGroup Mixer;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
 
     public void NewGame() {
-        levelMusic.Stop();
-        newGameMusic.Play();
         SceneManager.LoadScene(1);
+    }
+
+    public void LoadLevel3()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void Settings() {

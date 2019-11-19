@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4603382914776560}
   - component: {fileID: 212238257073472632}
-  - component: {fileID: 58011048938162636}
   - component: {fileID: 114563156577335044}
+  - component: {fileID: 58400020896838456}
   m_Layer: 0
   m_Name: Rock
   m_TagString: ProjectTile
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58011048938162636
+--- !u!58 &58400020896838456
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -56,7 +56,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.17
+  m_Radius: 0.187
 --- !u!114 &114563156577335044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c05b052261f794c94974ad61fbebb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atackDamage: 15
+  atackDamage: 0.2
   pType: 0
 --- !u!212 &212238257073472632
 SpriteRenderer:

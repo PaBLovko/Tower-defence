@@ -57,6 +57,14 @@ MonoBehaviour:
   - {fileID: 1775281906587838, guid: dd6245f3574923242b3607260de33285, type: 2}
   - {fileID: 1124593569210142, guid: 33cadcc055fab1949b2dbb13a7600436, type: 2}
   maxEnemyOnScrean: 8
-  totalEnemys: 8
+  totalEnemys: 15
   enemyType: 2
+  wasEnemyOnScrean: 0
   enemiesPerSpawn: 1
+  pausePanel: {fileID: 0}
+  health: 5
+  numberOfLifes: 5
+  lives: []
+  fulLife: {fileID: 0}
+  emptyLife: {fileID: 0}
+  EnemyList: []

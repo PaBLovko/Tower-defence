@@ -8,12 +8,12 @@ public enum projectTipe
 public class ProjectTile : MonoBehaviour
 {
     [SerializeField]
-    int atackDamage;
+    float atackDamage;
 
     [SerializeField]
     projectTipe pType;
 
-    public int GetAttackDamage
+    public float GetAttackDamage
     {
         get
         {
