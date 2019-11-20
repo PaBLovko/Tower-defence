@@ -73,7 +73,7 @@ public class TowerManager : Loader<TowerManager>
 
     public void DisebleDrag()
     {
-        spriteRenderer.enabled = false;//включаем отображение картинки
+        spriteRenderer.enabled = false;//выключаем отображение картинки
     }
 
     public void SelectedTower(TowerBtn towerSellected)

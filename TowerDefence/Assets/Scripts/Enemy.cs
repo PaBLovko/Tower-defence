@@ -8,16 +8,17 @@ public class Enemy : MonoBehaviour
     public Transform[] wayPoints;//точки к которым идти 
     public float navigation;//как часто персонаж будет обновляться(сколько кадров)
     [SerializeField]
-    public Image bar;
+    public Canvas bar;
+    //SpriteRenderer spriteRenderer;//отображает картинку окол кусора
     public float health;
     public int reward;
     Transform enemy;
     float navigationTime = 0;//обновлять положение персонажей в простр
-
+    float currentHealth;
 
     void Start()
     {
-        health = 1f;
+        currentHealth = health;
         enemy = GetComponent<Transform>();//чтобы реализовать и считывать положение персонажа
         Manager.Instance.RegisterEnemy(this);
     }
@@ -25,12 +26,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0f)
+        if (currentHealth <= 0f)
         {
             Manager.Instance.UnRegisterEnemy(this, true);
+            Destroy(bar.gameObject);
         }
-        bar.fillAmount = health;
-        // FollowEnemy();
+        Image image = bar.GetComponentInChildren<Image>();
+        image.fillAmount = 1f / health * (health - (health - currentHealth));
+        FollowEnemy();
         if (wayPoints != null)
         {
             navigationTime += Time.deltaTime;//чтобы двигаться к след точке
@@ -68,8 +71,12 @@ public class Enemy : MonoBehaviour
 
     public void GetDamage(float damage)
     {
-        health -= damage;
+        currentHealth -= damage;
     }
 
-
+    public void FollowEnemy()
+    {
+        bar.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//изображение просчитывает положение относительно камеры и привяз к курсору 
+        bar.transform.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
+    }
 }
