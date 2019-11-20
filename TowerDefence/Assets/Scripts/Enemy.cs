@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        bar=Instantiate(bar);
         animator = GetComponent<Animator>();
         currentHealth = health;
         enemy = GetComponent<Transform>();//чтобы реализовать и считывать положение персонажа
