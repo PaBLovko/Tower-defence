@@ -118,24 +118,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2179e126fdad74685b7c574f33e9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 0
   exit: {fileID: 4404076731032592, guid: 5876298143fffe644a2e5b28ea2ffebf, type: 2}
   wayPoints:
-  - {fileID: 4916071301536132, guid: 4f0038009297bd74987902d4d8154cdd, type: 2}
-  - {fileID: 4559715616190606, guid: 0fa1457377a8aa8419dc12190e188687, type: 2}
-  - {fileID: 4196660340662192, guid: 14847d237d3ddf54d8cd37e9dc064a97, type: 2}
-  - {fileID: 4956291373008556, guid: c2dd608d420836f47b1b2b4f74f9926d, type: 2}
-  - {fileID: 4654965291949110, guid: ff770d69a0f5fdb488bff5e0bdd3c8b7, type: 2}
-  - {fileID: 4090666676273690, guid: 2ee8412be1fe78140a7354600119269c, type: 2}
-  - {fileID: 4383012869220740, guid: 66e27096969188d4aa14654f5326821e, type: 2}
-  - {fileID: 4154340545760324, guid: 5df22ee2a2b9ecf4386ee21f4ade02f2, type: 2}
-  - {fileID: 4990925246862682, guid: 138b9464e5300ec409758806bc984607, type: 2}
-  - {fileID: 4813096099049716, guid: bd6cc1bd30a17cb48b494657f3aa20ba, type: 2}
-  - {fileID: 4967694658686482, guid: 4aa473eebab5d184a8b5a700278b0a91, type: 2}
-  - {fileID: 4635895017540430, guid: ce77a70e0a0cc744b93e89f0443e50c4, type: 2}
-  - {fileID: 4082859311483162, guid: 3f626edc623b03e49bdb5bf9ee156ecf, type: 2}
-  navigation: 0
-  bar: {fileID: 114125462402961672, guid: b20bebd8c1898df4aa6189488accba16, type: 2}
+  - {fileID: 4299144215175726, guid: a31bbd92a8ffc8e4285c30c3e03e6a46, type: 2}
+  - {fileID: 4045660384485052, guid: 511678251bcc2ab43958189a6ca5f304, type: 2}
+  - {fileID: 4085323498065696, guid: 493ee9c2aa4a97442aa100b5462cb6d6, type: 2}
+  - {fileID: 4194067692491556, guid: 6c29f4c9fe8bc4446b4e66b8e04787cd, type: 2}
+  - {fileID: 4181712177847140, guid: 122f77c5e98eae145ab18dd55e638c24, type: 2}
+  - {fileID: 4680832901507846, guid: 0bd8710f07a8a114ebf97eb7c61683d9, type: 2}
+  - {fileID: 4239259494301174, guid: 944ceb98c9911954ea1b69d88a2551f5, type: 2}
+  - {fileID: 4733863046016114, guid: b52e04a181a09334e8a44c3d514b06eb, type: 2}
+  - {fileID: 4960798996815408, guid: e0e2bd1a29eea6c48b01ae1379b80e02, type: 2}
+  - {fileID: 4099841017150188, guid: 3e9e1d4bbb2db0a4e86b9107bf1ef7cf, type: 2}
+  - {fileID: 4787717411933586, guid: f54cd9bc1ee829e43bae4a80ce088e3b, type: 2}
+  - {fileID: 4660725496218260, guid: ab781640500e45546a697c48107b6cc4, type: 2}
+  bar: {fileID: 223264439347251126, guid: 69c5599eb129a7041be11ba108a83864, type: 2}
+  moneyPanel: {fileID: 223860057849491184, guid: 55095a6f6d812c34d9cc6929c29a63b2,
+    type: 2}
   health: 1.2
   reward: 30
 --- !u!212 &212043085511857772

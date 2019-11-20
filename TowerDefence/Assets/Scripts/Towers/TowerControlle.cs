@@ -21,7 +21,8 @@ public class TowerControlle : MonoBehaviour
     void Update()
     {
         attackCounter -= Time.deltaTime;//задержка перед выстрелом
-        if (targetEnemy != null && targetEnemy.IsDie()) {
+        if (targetEnemy != null && targetEnemy.IsDie())
+        {
             targetEnemy = null;
         }
         if (targetEnemy == null)
@@ -116,7 +117,7 @@ public class TowerControlle : MonoBehaviour
 
     public int GetCost()
     {
-        return this.cost;
+        return cost;
     }
 
     private List<Enemy> GetEnemiesInRange()

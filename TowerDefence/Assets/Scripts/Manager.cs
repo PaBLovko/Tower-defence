@@ -38,9 +38,12 @@ public class Manager : Loader<Manager>
 
     [SerializeField]
     int numberOfLifes;
-    public Image[] lives;
-    public Sprite fulLife;
-    public Sprite emptyLife;
+    [SerializeField]
+    Image[] lives;
+    [SerializeField]
+    Sprite fulLife;
+    [SerializeField]
+    Sprite emptyLife;
 
     public List<Enemy> EnemyList = new List<Enemy>();
 
@@ -95,6 +98,13 @@ public class Manager : Loader<Manager>
                 }
             }
         }
+        else
+        {
+            if (EnemyList.Count == 0 && wasEnemyOnScrean >= totalEnemys)
+            {
+                SceneManager.LoadScene(7);
+            }
+        }
         yield return new WaitForSeconds(SpawnDelay);//делаем задержку
         StartCoroutine(Spawn());//вызываем спавн
     }
@@ -110,9 +120,12 @@ public class Manager : Loader<Manager>
         if (finis == false)
         {
             health--;
+            Destroy(enemy.gameObject);//убираем объект нашего противника
         }
-        Manager.Instance.SetResources(enemy.GetReward());
-       // Destroy(enemy.gameObject);//убираем объект нашего противника
+        else
+        {
+            Manager.Instance.SetResources(Manager.Instance.GetResources() + enemy.GetReward());
+        }
     }
 
     public void DestrayEnemies()

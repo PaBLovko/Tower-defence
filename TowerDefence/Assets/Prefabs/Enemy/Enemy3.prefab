@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124593569210142}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.043, y: -0.911, z: -0.03659892}
+  m_LocalPosition: {x: -4.025032, y: -0.9739262, z: -0.03659892}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b2179e126fdad74685b7c574f33e9ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: 0
   exit: {fileID: 4404076731032592, guid: 5876298143fffe644a2e5b28ea2ffebf, type: 2}
   wayPoints:
   - {fileID: 4916071301536132, guid: 4f0038009297bd74987902d4d8154cdd, type: 2}
@@ -134,8 +133,9 @@ MonoBehaviour:
   - {fileID: 4967694658686482, guid: 4aa473eebab5d184a8b5a700278b0a91, type: 2}
   - {fileID: 4635895017540430, guid: ce77a70e0a0cc744b93e89f0443e50c4, type: 2}
   - {fileID: 4082859311483162, guid: 3f626edc623b03e49bdb5bf9ee156ecf, type: 2}
-  navigation: 0
   bar: {fileID: 223264439347251126, guid: 69c5599eb129a7041be11ba108a83864, type: 2}
+  moneyPanel: {fileID: 223860057849491184, guid: 55095a6f6d812c34d9cc6929c29a63b2,
+    type: 2}
   health: 1.5
   reward: 50
 --- !u!212 &212260336529781098

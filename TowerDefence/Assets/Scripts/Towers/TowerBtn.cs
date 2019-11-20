@@ -2,7 +2,6 @@
 
 public class TowerBtn : MonoBehaviour
 {
-
     [SerializeField]
     GameObject towerObject;
     [SerializeField]

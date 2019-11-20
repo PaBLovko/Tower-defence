@@ -3,12 +3,16 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    public int target = 0;//what point now
-    public Transform exit;
-    public Transform[] wayPoints;//точки к которым идти 
-    public float navigation;//как часто персонаж будет обновляться(сколько кадров)
+    [SerializeField]
+    Transform exit;
+    [SerializeField]
+    Transform[] wayPoints;//точки к которым идти 
     [SerializeField]
     Canvas bar;
+    [SerializeField]
+    Canvas moneyPanel;
+    int target = 0;//what point now
+    float navigation = 0;//как часто персонаж будет обновляться(сколько кадров)
     Animator animator;
     public float health;
     public int reward;
@@ -16,10 +20,11 @@ public class Enemy : MonoBehaviour
     float navigationTime = 0;//обновлять положение персонажей в простр
     float currentHealth;
     bool isDie = false;
-
     void Start()
     {
-        bar=Instantiate(bar);
+        moneyPanel = Instantiate(moneyPanel);
+       
+        bar = Instantiate(bar);
         animator = GetComponent<Animator>();
         currentHealth = health;
         enemy = GetComponent<Transform>();//чтобы реализовать и считывать положение персонажа
@@ -37,10 +42,11 @@ public class Enemy : MonoBehaviour
                 Manager.Instance.UnRegisterEnemy(this, true);
                 Destroy(bar.gameObject);
                 isDie = true;
+                navigationTime = 0;
             }
             Image image = bar.GetComponentInChildren<Image>();
             image.fillAmount = 1f / health * (health - (health - currentHealth));
-            FollowEnemy();
+            FollowEnemy(bar, 0.3f);
             if (wayPoints != null)
             {
                 navigationTime += Time.deltaTime;//чтобы двигаться к след точке
@@ -57,6 +63,18 @@ public class Enemy : MonoBehaviour
                     navigationTime = 0;
                 }
             }
+        }
+        if (isDie)
+        {
+            Text tex = moneyPanel.GetComponentInChildren<Text>();
+            tex.text =""+reward;
+            navigationTime += Time.deltaTime;
+            FollowEnemy(moneyPanel, 0.5f);
+            if (navigationTime >= 2)
+            {
+                Destroy(moneyPanel.gameObject);
+            }
+
         }
     }
 
@@ -88,9 +106,9 @@ public class Enemy : MonoBehaviour
         animator.Play("Hurt");
     }
 
-    public void FollowEnemy()
+    public void FollowEnemy(Canvas canvas, float offset)
     {
-        bar.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//изображение просчитывает положение относительно камеры и привяз к курсору 
-        bar.transform.position = new Vector2(transform.position.x, transform.position.y + 0.3f);
+        canvas.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//изображение просчитывает положение относительно камеры и привяз к курсору 
+        canvas.transform.position = new Vector2(transform.position.x, transform.position.y + offset);
     }
 }

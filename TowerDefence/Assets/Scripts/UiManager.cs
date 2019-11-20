@@ -25,6 +25,17 @@ public class UiManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene(8);
+    }
+
+    public void LoadLevel2()
+    {
+        SceneManager.LoadScene(5);
+    }
+
+
     public void LoadLevel3()
     {
         SceneManager.LoadScene(3);

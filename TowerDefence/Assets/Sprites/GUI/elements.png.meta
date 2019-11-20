@@ -13,6 +13,7 @@ TextureImporter:
     21300016: LowHealth
     21300018: Money
     21300020: towerCost
+    21300022: Gold
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -301,13 +302,33 @@ TextureImporter:
         width: 131
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ac47df7bb1c7c1d4cb29af51bbad1797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gold
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 2272
+        width: 53
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b6589c55411ca4dbb50b9f28b91984
       vertices: []
       indices: 
       edges: []
