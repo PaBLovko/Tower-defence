@@ -21,7 +21,9 @@ public class TowerControlle : MonoBehaviour
     void Update()
     {
         attackCounter -= Time.deltaTime;//задержка перед выстрелом
-
+        if (targetEnemy != null && targetEnemy.IsDie()) {
+            targetEnemy = null;
+        }
         if (targetEnemy == null)
         {
             Enemy nearestEnemy = GetNearestEnemy();

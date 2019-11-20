@@ -112,7 +112,7 @@ public class Manager : Loader<Manager>
             health--;
         }
         Manager.Instance.SetResources(enemy.GetReward());
-        Destroy(enemy.gameObject);//убираем объект нашего противника
+       // Destroy(enemy.gameObject);//убираем объект нашего противника
     }
 
     public void DestrayEnemies()

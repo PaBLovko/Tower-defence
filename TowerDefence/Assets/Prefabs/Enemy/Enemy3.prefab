@@ -135,7 +135,7 @@ MonoBehaviour:
   - {fileID: 4635895017540430, guid: ce77a70e0a0cc744b93e89f0443e50c4, type: 2}
   - {fileID: 4082859311483162, guid: 3f626edc623b03e49bdb5bf9ee156ecf, type: 2}
   navigation: 0
-  bar: {fileID: 223596825826088128, guid: 69c5599eb129a7041be11ba108a83864, type: 2}
+  bar: {fileID: 223192315664920108, guid: 69c5599eb129a7041be11ba108a83864, type: 2}
   health: 1.5
   reward: 50
 --- !u!212 &212260336529781098

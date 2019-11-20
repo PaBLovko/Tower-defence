@@ -27,7 +27,6 @@ public class TowerManager : Loader<TowerManager>
                 hit.collider.tag = "TowerGroundIsFull";//меняем тэг чтобы нельзя было поставить 2 башни в одну 
                 PlaceTower(hit);//то выставляем товер 
                 DisebleDrag();
-                GetComponent<AudioSource>().Play();
             }
             else if (spriteRenderer.enabled)
             {
