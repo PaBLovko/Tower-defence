@@ -11,7 +11,7 @@ public class TowerBtn : MonoBehaviour
     {
         get
         {
-            return towerObject;//возвращает башню
+            return towerObject;
         }
     }
 
@@ -19,7 +19,7 @@ public class TowerBtn : MonoBehaviour
     {
         get
         {
-            return towerObject.GetComponent<TowerControlle>();//возвращает башню
+            return towerObject.GetComponent<TowerControlle>();
         }
     }
 
@@ -27,7 +27,7 @@ public class TowerBtn : MonoBehaviour
     {
         get
         {
-            return dragSprite;//возвращает картинку
+            return dragSprite;
         }
     }
 

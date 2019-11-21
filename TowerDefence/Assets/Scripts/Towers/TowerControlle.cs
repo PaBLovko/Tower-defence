@@ -20,7 +20,7 @@ public class TowerControlle : MonoBehaviour
 
     void Update()
     {
-        attackCounter -= Time.deltaTime;//задержка перед выстрелом
+        attackCounter -= Time.deltaTime;
         if (targetEnemy != null && targetEnemy.IsDie())
         {
             targetEnemy = null;
@@ -64,7 +64,7 @@ public class TowerControlle : MonoBehaviour
     {
         isAttacking = false;
         ProjectTile newProjectTile = Instantiate(projectTile) as ProjectTile;
-        newProjectTile.transform.localPosition = transform.localPosition;//стрела появляется в башни
+        newProjectTile.transform.localPosition = transform.localPosition;
         GetComponent<AudioSource>().Play();
 
         if (targetEnemy == null)
@@ -73,7 +73,6 @@ public class TowerControlle : MonoBehaviour
         }
         else
         {
-            //move projectTile to enemy
             StartCoroutine(MoveProjectTile(newProjectTile));
         }
     }

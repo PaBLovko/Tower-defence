@@ -6,32 +6,31 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     Transform exit;
     [SerializeField]
-    Transform[] wayPoints;//точки к которым идти 
+    Transform[] wayPoints;
     [SerializeField]
     Canvas bar;
     [SerializeField]
     Canvas moneyPanel;
-    int target = 0;//what point now
-    float navigation = 0;//как часто персонаж будет обновляться(сколько кадров)
+    int target = 0;
+    float navigation = 0;
     Animator animator;
     public float health;
     public int reward;
     Transform enemy;
-    float navigationTime = 0;//обновлять положение персонажей в простр
+    float navigationTime = 0;
     float currentHealth;
     bool isDie = false;
     void Start()
     {
         moneyPanel = Instantiate(moneyPanel);
-       
+
         bar = Instantiate(bar);
         animator = GetComponent<Animator>();
         currentHealth = health;
-        enemy = GetComponent<Transform>();//чтобы реализовать и считывать положение персонажа
+        enemy = GetComponent<Transform>();
         Manager.Instance.RegisterEnemy(this);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!isDie)
@@ -49,15 +48,15 @@ public class Enemy : MonoBehaviour
             FollowEnemy(bar, 0.3f);
             if (wayPoints != null)
             {
-                navigationTime += Time.deltaTime;//чтобы двигаться к след точке
+                navigationTime += Time.deltaTime;
                 if (navigationTime > navigation)
-                {//если 
-                    if (target < wayPoints.Length)//если мы не дошли до конца
-                    {                           //позиция на которой сейчас  то позиция след точки       рассчет того где сейчас противник
+                {
+                    if (target < wayPoints.Length)
+                    {
                         enemy.position = Vector2.MoveTowards(enemy.position, wayPoints[target].position, navigationTime);
                     }
                     else
-                    {//если доли до конца то идем на выход
+                    {
                         enemy.position = Vector2.MoveTowards(enemy.position, exit.position, navigationTime);
                     }
                     navigationTime = 0;
@@ -67,7 +66,7 @@ public class Enemy : MonoBehaviour
         if (isDie)
         {
             Text tex = moneyPanel.GetComponentInChildren<Text>();
-            tex.text =""+reward;
+            tex.text = "" + reward;
             navigationTime += Time.deltaTime;
             FollowEnemy(moneyPanel, 0.5f);
             if (navigationTime >= 2)
@@ -82,7 +81,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.tag == "MoveingPoint")
         {
-            target++;//если дошли до цели идем к след
+            target++;
         }
         else if (collision.tag == "Finish")
         {
@@ -108,7 +107,7 @@ public class Enemy : MonoBehaviour
 
     public void FollowEnemy(Canvas canvas, float offset)
     {
-        canvas.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//изображение просчитывает положение относительно камеры и привяз к курсору 
+        canvas.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         canvas.transform.position = new Vector2(transform.position.x, transform.position.y + offset);
     }
 }

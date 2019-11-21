@@ -36,8 +36,8 @@ public class TowerManager : Loader<TowerManager>
                     Manager.Instance.GetSound().Play();
                 }
             }
-            catch (Exception ) { }
-               
+            catch (Exception) { }
+
         }
 
         if (Input.GetMouseButton(1))
@@ -46,45 +46,45 @@ public class TowerManager : Loader<TowerManager>
             towerBtnPressed = null;
         }
         if (spriteRenderer.enabled)
-        {//если у нас активен спрайт рендерер то следуем мыши
+        {
             FollowMouse();
         }
     }
 
     public void PlaceTower(RaycastHit2D hit)
     {
-        if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)//мы не сможем поставить башню если нажали на кноку выбора башни
+        if (!EventSystem.current.IsPointerOverGameObject() && towerBtnPressed != null)
         {
             TowerControlle chousenTower = towerBtnPressed.GetTowerControll;
             Manager.Instance.SetResources(Manager.Instance.GetResources() - chousenTower.GetCost());
-            GameObject newTower = Instantiate(towerBtnPressed.GetTowerObject);//создаем там башню именно того типа на который мы кликнули 
+            GameObject newTower = Instantiate(towerBtnPressed.GetTowerObject);
 
-            newTower.transform.position = hit.transform.position;//положение нового тавера будет в том месте куда мы кликаем
+            newTower.transform.position = hit.transform.position;
         }
     }
 
     public void FollowMouse()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//изображение просчитывает положение относительно камеры и привяз к курсору 
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector2(transform.position.x, transform.position.y);
     }
 
     public void EnebleDrag(Sprite sprite)
     {
-        spriteRenderer.enabled = true;//включаем отображение картинки
-        spriteRenderer.sprite = sprite;//отображаем ту картинку кот выбрана
+        spriteRenderer.enabled = true;
+        spriteRenderer.sprite = sprite;
 
     }
 
     public void DisebleDrag()
     {
-        spriteRenderer.enabled = false;//выключаем отображение картинки
+        spriteRenderer.enabled = false;
     }
 
     public void SelectedTower(TowerBtn towerSellected)
-    {//какая башня была выбрана 
-        towerBtnPressed = towerSellected;//относит только кнопки мы нажали должна быть выбрана башня
-        EnebleDrag(towerBtnPressed.GetDragSprite);//включаем отолражение картинки тавера 
+    {
+        towerBtnPressed = towerSellected;
+        EnebleDrag(towerBtnPressed.GetDragSprite);
 
     }
 

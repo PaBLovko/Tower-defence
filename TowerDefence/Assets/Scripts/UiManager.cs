@@ -16,7 +16,7 @@ public class UiManager : MonoBehaviour
     GameObject pausePanel;
 
 
-    public AudioMixerGroup Mixer;
+    public AudioMixerGroup mixer;
 
 
 
@@ -64,12 +64,12 @@ public class UiManager : MonoBehaviour
 
     public void ChangeEffectVolume(float volume)
     {
-        Mixer.audioMixer.SetFloat("EffectVolume", Mathf.Lerp(-40, -20, volume));
+        mixer.audioMixer.SetFloat("EffectVolume", Mathf.Lerp(-40, -20, volume));
     }
 
     public void ChangeMusicVolume(float volume)
     {
-        Mixer.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-40, -20, volume));
+        mixer.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-40, -20, volume));
     }
     public void GamePause()
     {

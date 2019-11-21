@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Manager : Loader<Manager>
 {
-    [SerializeField]//чтобы поля было видно в юнити
+    [SerializeField]
     GameObject spawnPoint;
     [SerializeField]
     GameObject[] enemies;
@@ -47,7 +47,6 @@ public class Manager : Loader<Manager>
 
     public List<Enemy> EnemyList = new List<Enemy>();
 
-    // Use this for initialization
     const float SpawnDelay = 0.5f;
 
     private void Update()
@@ -87,13 +86,13 @@ public class Manager : Loader<Manager>
     IEnumerator Spawn()
     {
         if (enemiesPerSpawn > 0 && EnemyList.Count < totalEnemys && wasEnemyOnScrean != totalEnemys)
-        {//если спавнить нужно больше 0 и количество сущ на экране  меньше максисмума
+        {
             for (int i = 0; i < enemiesPerSpawn; i++)
-            {//делаем цикл
+            {
                 if (EnemyList.Count < maxEnemyOnScrean)
-                {//спавним одно существо 
-                    GameObject newEnemy = Instantiate(enemies[enemyType]) as GameObject;//какой тип 
-                    newEnemy.transform.position = spawnPoint.transform.position;//по каким координатом
+                {
+                    GameObject newEnemy = Instantiate(enemies[enemyType]) as GameObject;
+                    newEnemy.transform.position = spawnPoint.transform.position;
                     wasEnemyOnScrean++;
                 }
             }
@@ -105,22 +104,22 @@ public class Manager : Loader<Manager>
                 SceneManager.LoadScene(7);
             }
         }
-        yield return new WaitForSeconds(SpawnDelay);//делаем задержку
-        StartCoroutine(Spawn());//вызываем спавн
+        yield return new WaitForSeconds(SpawnDelay);
+        StartCoroutine(Spawn());
     }
 
     public void RegisterEnemy(Enemy enemy)
-    {//регистр противника
+    {
         EnemyList.Add(enemy);
     }
 
     public void UnRegisterEnemy(Enemy enemy, bool finis)
-    {//убираем противника
+    {
         EnemyList.Remove(enemy);
         if (finis == false)
         {
             health--;
-            Destroy(enemy.gameObject);//убираем объект нашего противника
+            Destroy(enemy.gameObject);
         }
         else
         {
@@ -132,9 +131,9 @@ public class Manager : Loader<Manager>
     {
         foreach (Enemy enemy in EnemyList)
         {
-            Destroy(enemy.gameObject);//уничтожение противника
+            Destroy(enemy.gameObject);
         }
-        EnemyList.Clear();//если уничтожили всех противников очистить экран
+        EnemyList.Clear();
     }
 
     public int GetResources()

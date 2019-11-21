@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQBGAAAADgAAAIAIAAAAgAAAFAEAAAAAABAgCAAABo=</HashCode>
+      <FileName>Assets\Scripts\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Loader&lt;T&gt;">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Loader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Manager">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgIAAACgCBCBAgIEAAAAUAQIAAAABAQCACCAQoAg=</HashCode>
+      <FileName>Assets\Scripts\Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoneyControlle" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MoneyControlle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectTile" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAgAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ProjectTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TowerManager">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACAAAGAAEAAAAAAAAIAAgAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TowerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TowerBtn" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Towers\TowerBtn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TowerControlle" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYQAAAAAAgAAAAAIAAAAAIAAQYAQEAAAAEAAAAQCAAA=</HashCode>
+      <FileName>Assets\Scripts\Towers\TowerControlle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UiManager">
+    <Position X="11" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>iAOQAAAAAAAAAAAAAAAgAAAMBAAAAAkAoAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UiManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="projectTipe" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAABAAAAAABAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\ProjectTile.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
