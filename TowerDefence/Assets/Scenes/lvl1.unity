@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -9872,7 +9872,7 @@ MonoBehaviour:
   newGameMusic: {fileID: 0}
   levelMusic: {fileID: 0}
   pausePanel: {fileID: 618690347}
-  Mixer: {fileID: 24300002, guid: 825f06c3866f5e242b64f9f48033801a, type: 2}
+  mixer: {fileID: 24300002, guid: 825f06c3866f5e242b64f9f48033801a, type: 2}
 --- !u!4 &485078581
 Transform:
   m_ObjectHideFlags: 0
@@ -13922,7 +13922,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 9
   m_TargetDisplay: 0
 --- !u!1 &636509741
 GameObject:
@@ -17881,7 +17881,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

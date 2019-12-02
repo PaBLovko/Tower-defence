@@ -64,12 +64,12 @@ public class UiManager : MonoBehaviour
 
     public void ChangeEffectVolume(float volume)
     {
-        mixer.audioMixer.SetFloat("EffectVolume", Mathf.Lerp(-40, -20, volume));
+        mixer.audioMixer.SetFloat("EffectVolume", Mathf.Lerp(-80, -20, volume));
     }
 
     public void ChangeMusicVolume(float volume)
     {
-        mixer.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-40, -20, volume));
+        mixer.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-80, -20, volume));
     }
     public void GamePause()
     {

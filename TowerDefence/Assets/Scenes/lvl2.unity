@@ -15024,7 +15024,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -32305,7 +32305,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -42116,7 +42116,7 @@ MonoBehaviour:
   newGameMusic: {fileID: 0}
   levelMusic: {fileID: 0}
   pausePanel: {fileID: 1489324172}
-  Mixer: {fileID: 24300002, guid: 825f06c3866f5e242b64f9f48033801a, type: 2}
+  mixer: {fileID: 24300002, guid: 825f06c3866f5e242b64f9f48033801a, type: 2}
 --- !u!4 &2058229116
 Transform:
   m_ObjectHideFlags: 0
